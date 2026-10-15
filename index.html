@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>地球的結構｜互動小測驗</title>
+<style>
+:root{--ink:#223447;--muted:#637386;--paper:#f6f7f2;--card:#fff;--line:#dbe3e4;--green:#1f7669;--green-dark:#14584f;--mint:#e5f4ef;--blue:#dbeaf6;--gold:#e9bd63;--red:#b9423d;--red-bg:#fff0ee;--good:#14745a;--good-bg:#e7f6ee;--shadow:0 18px 48px rgba(34,52,71,.09)}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 10% 0%,#e9f2ed 0,transparent 32%),radial-gradient(circle at 100% 15%,#e8eff7 0,transparent 28%),var(--paper);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI","Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;line-height:1.65}
+button,input,select{font:inherit}button{cursor:pointer}button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #77b9ad;outline-offset:2px}.wrap{max-width:900px;margin:0 auto;padding:28px 18px 54px}.hero{position:relative;overflow:hidden;background:#173e43;color:white;border-radius:26px;padding:30px 30px 27px;box-shadow:var(--shadow)}.hero:after{content:"";position:absolute;width:210px;height:210px;border:1px solid #8bd0bd55;border-radius:50%;right:-48px;top:-80px;box-shadow:0 0 0 25px #8bd0bd12,0 0 0 54px #8bd0bd0b}.eyebrow{font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:#a8dfd0;font-weight:800}.hero h1{font-size:clamp(1.8rem,4vw,2.5rem);line-height:1.2;margin:9px 0 12px;letter-spacing:.02em}.hero p{color:#d6e8e3;margin:0;max-width:650px}.pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:19px}.pill{border:1px solid #ffffff38;background:#ffffff0e;border-radius:999px;padding:5px 11px;font-size:.83rem;color:#effaf7}.panel{margin-top:22px;background:var(--card);border:1px solid #e2e8e6;border-radius:22px;padding:clamp(18px,4vw,30px);box-shadow:var(--shadow)}.topline{display:flex;justify-content:space-between;gap:15px;align-items:center;margin-bottom:16px}.kicker{font-weight:800;color:var(--green);font-size:.82rem;letter-spacing:.08em}.count{color:var(--muted);font-size:.9rem;font-weight:700;white-space:nowrap}.progress{height:7px;background:#edf1ee;border-radius:99px;overflow:hidden;margin:0 0 25px}.progress span{display:block;height:100%;background:linear-gradient(90deg,#1f7669,#8bbd72);border-radius:99px;transition:width .25s}.type-label{display:inline-flex;align-items:center;gap:7px;padding:5px 10px;border-radius:9px;background:#eef6f1;color:var(--green-dark);font-size:.84rem;font-weight:800;margin-bottom:13px}.question{font-size:clamp(1.15rem,2.4vw,1.42rem);font-weight:760;line-height:1.55;margin:0 0 20px}.subhint{font-size:.91rem;color:var(--muted);margin:-9px 0 18px}.answers{display:grid;gap:10px}.option{display:flex;align-items:flex-start;gap:12px;padding:13px 15px;border:1px solid var(--line);border-radius:13px;transition:border-color .15s,background .15s}.option:hover{border-color:#87bdb0;background:#f7fbf9}.option input{margin-top:6px;accent-color:var(--green);transform:scale(1.12);flex-shrink:0}.opt-letter{font-weight:850;color:var(--green);min-width:1.4rem}.fill-input,.correction-input,.match-select{width:100%;padding:12px 13px;border:1px solid #cdd9d7;border-radius:11px;background:#fff;color:var(--ink)}.fill-input{max-width:520px}.bank{display:flex;flex-wrap:wrap;gap:7px;margin:10px 0 14px}.word-chip{border:1px solid #d8e4de;border-radius:999px;background:#f2f7f2;padding:5px 11px;font-size:.88rem;color:#35514c}.word-chip:hover{background:#e3f0e8}.match-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(180px,1.05fr);gap:10px 13px;align-items:center}.match-prompt{padding:12px 14px;background:#f7f9f7;border-radius:10px;border:1px solid #e6ece8}.sort-hint{color:var(--muted);font-size:.9rem;margin:-7px 0 13px}.sort-options{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.sort-item{min-height:56px;border-radius:12px;border:1px solid var(--line);background:white;padding:12px;text-align:left;color:var(--ink)}.sort-item:hover:not(:disabled){border-color:#88b9ad;background:#f7fbf9}.sort-item:disabled{opacity:.55;cursor:default}.order-box{border:1px dashed #99bfb3;background:#f4faf7;border-radius:12px;padding:13px 15px;margin-top:13px;min-height:52px}.order-box strong{color:var(--green-dark)}.small-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}.text-button{background:transparent;border:1px solid #cbd8d4;color:#42645c;padding:6px 10px;border-radius:9px;font-size:.86rem}.feedback{margin-top:19px;padding:15px 17px;border-radius:13px;display:none}.feedback.show{display:block}.feedback.good{background:var(--good-bg);border:1px solid #b9e3ce;color:#185a45}.feedback.bad{background:var(--red-bg);border:1px solid #f0c7c3;color:#7c2a26}.feedback strong{display:block;margin-bottom:4px}.answerline{margin-top:6px;font-size:.93rem}.actions{display:flex;justify-content:space-between;gap:12px;margin-top:24px}.btn{border:0;border-radius:12px;padding:12px 18px;font-weight:800;transition:transform .12s,background .12s}.btn:active{transform:translateY(1px)}.btn-primary{background:var(--green);color:white;box-shadow:0 6px 15px #1f766925}.btn-primary:hover{background:var(--green-dark)}.btn-secondary{background:#f1f4f1;color:#344d48;border:1px solid #dce4df}.btn:disabled{opacity:.45;cursor:not-allowed}.note{font-size:.83rem;color:var(--muted);margin:15px 2px 0}.start-screen{text-align:center;padding:14px 2px 8px}.earth-icon{font-size:3.4rem;line-height:1.2;margin:2px 0 10px}.start-screen h2{font-size:1.5rem;margin:0 0 10px}.start-screen p{max-width:620px;margin:0 auto 20px;color:var(--muted)}.type-map{display:flex;justify-content:center;flex-wrap:wrap;gap:7px;margin:18px auto 23px;max-width:680px}.type-map span{background:#f2f7f3;border:1px solid #e1e9e2;color:#47665c;border-radius:9px;padding:5px 9px;font-size:.82rem}.results-head{text-align:center;padding:4px 0 18px}.score-ring{width:108px;height:108px;margin:0 auto 11px;border:7px solid #b5d9c8;border-radius:50%;display:grid;place-items:center;background:#f2faf5;color:var(--green-dark);font-size:1.5rem;font-weight:900}.results-head h2{margin:6px 0;font-size:1.6rem}.results-head p{color:var(--muted);margin:0}.review-list{display:grid;gap:12px;margin:22px 0}.review{border:1px solid var(--line);border-radius:14px;padding:15px}.review.correct{border-left:5px solid #4a9b78}.review.wrong{border-left:5px solid #c65c54}.review-title{font-weight:800;margin-bottom:8px}.review-line{font-size:.92rem;margin-top:4px}.review-line b{color:#46625b}.source-note{border-top:1px solid #e3e9e5;margin-top:20px;padding-top:14px;font-size:.82rem;color:#6a7a83}.hide{display:none!important}.footer{text-align:center;color:#7a898a;font-size:.79rem;margin-top:19px}
+
+.start-actions,.results-actions,.library-actions{display:flex;justify-content:center;flex-wrap:wrap;gap:10px;margin:14px auto 0}
+.library-panel{margin-top:22px;text-align:left;border:1px solid #dbe6df;border-radius:17px;padding:clamp(14px,3vw,22px);background:#fbfdfb}
+.library-heading{display:flex;justify-content:space-between;align-items:flex-start;gap:14px;margin-bottom:16px}.library-heading h3{margin:4px 0 5px;font-size:1.18rem}.library-heading p{color:var(--muted);font-size:.9rem;margin:0;max-width:600px}.selected-counter{background:#e4f3eb;border:1px solid #cbe4d6;border-radius:11px;padding:8px 11px;color:#185d49;font-weight:850;white-space:nowrap;font-size:.9rem}
+.library-controls{display:grid;grid-template-columns:auto minmax(140px,1fr) auto minmax(145px,.8fr);gap:8px 10px;align-items:center}.library-search-label{font-weight:750;font-size:.87rem;color:#50685f}.library-search,.library-filter{min-width:0;width:100%;border:1px solid #cfdcd5;background:white;border-radius:10px;padding:10px 11px;color:var(--ink)}.library-meta{display:flex;justify-content:space-between;gap:10px;color:var(--muted);font-size:.84rem;margin:15px 0 6px}.selection-message{padding:8px 11px;margin:0 0 10px;background:#f1f6f2;border-radius:9px;color:#4d685f;font-size:.87rem}.selection-message.warn{background:#fff4dc;color:#80571b}.library-list{display:grid;gap:10px;max-height:560px;overflow:auto;padding:2px 4px 2px 1px}.library-card{border:1px solid #dce5df;border-radius:13px;background:white;padding:13px 14px}.library-card.selected{border-color:#6fae95;background:#f5fbf7;box-shadow:inset 3px 0 #398b6a}.library-card-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:8px}.library-type{display:inline-flex;border-radius:7px;padding:3px 8px;background:#eef5f0;color:#356858;font-size:.77rem;font-weight:850;margin-right:7px}.library-id{font-size:.76rem;color:#809087}.library-pick{display:flex;align-items:center;gap:7px;white-space:nowrap;font-size:.83rem;font-weight:750;color:#315f50}.library-pick input{accent-color:var(--green);width:17px;height:17px}.library-pick input:disabled{cursor:not-allowed}.library-prompt{font-weight:780;line-height:1.55;margin:3px 0 9px}.library-content{font-size:.88rem;color:#52675f;background:#f7f9f7;border-radius:9px;padding:9px 11px}.library-content ul{margin:4px 0 3px;padding-left:22px}.library-content li{margin:2px 0}.library-content .library-column{margin:4px 0}.library-card details{border-top:1px solid #e9eeea;margin-top:10px;padding-top:9px;font-size:.87rem}.library-card summary{cursor:pointer;font-weight:750;color:#2c6c5b}.library-answer{margin-top:8px}.library-answer div{margin-top:5px}.library-empty{padding:22px;text-align:center;color:var(--muted);border:1px dashed #cedbd3;border-radius:12px}.library-actions{justify-content:space-between;margin-top:14px}.library-actions .btn{font-size:.92rem}.results-actions{justify-content:center}
+@media(max-width:650px){.library-heading{display:block}.selected-counter{display:inline-block;margin-top:11px}.library-controls{grid-template-columns:1fr}.library-search-label{margin-top:4px}.library-card-head{gap:8px}.library-pick{white-space:normal}.library-actions{align-items:stretch}.library-actions .btn{flex:1}.start-actions .btn,.results-actions .btn{width:100%}}
+
+@media(max-width:560px){.wrap{padding:15px 11px 34px}.hero{padding:24px 20px;border-radius:20px}.panel{border-radius:18px;padding:18px 15px}.match-grid{grid-template-columns:1fr;gap:6px}.sort-options{grid-template-columns:1fr}.actions .btn{padding:11px 13px}.topline{align-items:flex-start}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="hero">
+    <div class="eyebrow">SCIENCE · UNIT 1</div>
+    <h1>地球的結構</h1>
+    <p>由地殼、板塊到岩石與土壤，逐題挑戰你的科學知識。</p>
+    <div class="pills"><span class="pill">每輪隨機 5 題</span><span class="pill">逐題判斷正誤</span><span class="pill">完成後查看答案</span></div>
+  </header>
+
+  <main class="panel" id="mainPanel">
+    <section id="startScreen" class="start-screen">
+      <div class="earth-icon" aria-hidden="true">🌍</div>
+      <h2>準備好開始了嗎？</h2>
+      <p>每輪會從題庫中抽出 5 題，盡量讓題型不重複。提交答案後會即時看到判斷結果；完成全部題目後，可以一次查看每題的作答、正確答案和解說。</p>
+      <div class="type-map"><span>選擇題</span><span>填充題</span><span>供詞填充</span><span>判斷題</span><span>判斷修正題</span><span>配對題</span><span>排序題</span></div>
+      <div class="start-actions">
+        <button class="btn btn-primary" id="startBtn">隨機抽 5 題　→</button>
+        <button class="btn btn-secondary" id="toggleLibraryBtn" aria-expanded="false" aria-controls="libraryPanel">瀏覽全部題目／自選 5 題</button>
+      </div>
+      <div class="note">題目取材自你上載的「單元一 認識地球」題庫，聚焦地球結構、板塊、岩石和土壤。</div>
+      <section id="libraryPanel" class="library-panel hide" aria-label="題庫總覽與自選題目">
+        <div class="library-heading"><div><div class="kicker">題庫總覽</div><h3>瀏覽題目，自選本輪的 5 題</h3><p>可搜尋題目、按題型篩選，並展開答案與解說。勾選恰好 5 題後即可開始。</p></div><div class="selected-counter" id="selectedCount">已選 0 / 5 題</div></div>
+        <div class="library-controls">
+          <label class="library-search-label" for="librarySearch">搜尋題目</label>
+          <input id="librarySearch" class="library-search" type="search" placeholder="輸入關鍵字，例如：板塊、砂岩、排水能力">
+          <label class="library-search-label" for="typeFilter">題型篩選</label>
+          <select id="typeFilter" class="library-filter"><option value="all">全部題型</option><option value="choice">選擇題</option><option value="fill">填充題</option><option value="word">供詞填充題</option><option value="tf">判斷題</option><option value="correct">判斷修正題</option><option value="match">配對題</option><option value="sort">排序題</option></select>
+        </div>
+        <div class="library-meta"><span id="librarySummary">顯示全部題目</span><span>答案預設收起</span></div>
+        <div id="selectionMessage" class="selection-message" aria-live="polite">每輪最多選 5 題。</div>
+        <div id="libraryList" class="library-list"></div>
+        <div class="library-actions"><button type="button" class="btn btn-secondary" id="clearSelectionBtn">清除已選題目</button><button type="button" class="btn btn-primary" id="startSelectedBtn" disabled>使用已選 5 題開始　→</button></div>
+      </section>
+    </section>
+
+    <section id="quizScreen" class="hide">
+      <div class="topline"><span class="kicker">地球的結構 · 練習中</span><span class="count" id="countLabel">第 1 / 5 題</span></div>
+      <div class="progress" aria-label="測驗進度"><span id="progressBar" style="width:20%"></span></div>
+      <div id="questionArea"></div>
+      <div id="feedback" class="feedback" aria-live="polite"></div>
+      <div class="actions"><button class="btn btn-secondary" id="quitBtn">重新抽題</button><button class="btn btn-primary" id="submitBtn">提交答案</button></div>
+      <div class="note">提示：每題獨立作答。提交後會鎖定該題，然後再進入下一題。</div>
+    </section>
+
+    <section id="resultsScreen" class="hide">
+      <div class="results-head"><div class="score-ring" id="scoreRing">0 / 5</div><h2 id="resultTitle">完成測驗！</h2><p id="resultSubtitle"></p></div>
+      <div class="kicker">全部答案與作答結果</div>
+      <div class="review-list" id="reviewList"></div>
+      <div class="results-actions"><button class="btn btn-primary" id="restartBtn">再隨機抽 5 題　↻</button><button class="btn btn-secondary" id="chooseAgainBtn">返回題庫自選題目</button></div>
+      <div class="source-note">內容依據上載題庫整理；部分題目只作簡短排版調整，答案以原題庫提供的答案為準。</div>
+    </section>
+  </main>
+  <div class="footer">離線互動練習 · 可直接用瀏覽器開啟</div>
+</div>
+<script>
+const TYPE_LABELS={choice:'選擇題',fill:'填充題',word:'供詞填充題',tf:'判斷題',correct:'判斷修正題',match:'配對題',sort:'排序題'};
+const BANK={
+choice:[
+{id:'01k001',type:'choice',prompt:'以下哪項物品與地球的結構最相似？',options:[['A','西瓜'],['B','蘋果'],['C','熟雞蛋'],['D','乒乓球']],answer:['C'],explain:'題庫答案是熟雞蛋，因為題目以它比喻地球分層的結構。'},
+{id:'01k002',type:'choice',prompt:'地殼主要由甚麼構成？',options:[['A','岩漿'],['B','岩石'],['C','泥土'],['D','沙子']],answer:['B'],explain:'地殼主要由岩石構成。'},
+{id:'01k003',type:'choice',prompt:'地球的中心是甚麼？',options:[['A','岩石'],['B','地殼'],['C','地幔'],['D','地核']],answer:['D'],explain:'地球的中心是地核。'},
+{id:'01k004',type:'choice',prompt:'以下哪項對地球結構的描述是正確的？',options:[['A','地殼是地球的中心。'],['B','地核是地球的最外層。'],['C','地幔主要由岩石構成。'],['D','地核主要由金屬組成，溫度極高。']],answer:['D'],explain:'地核位於地球中心，主要由金屬組成，溫度極高。'},
+{id:'01k005',type:'choice',prompt:'以下哪項對地球結構的描述是不正確的？',options:[['A','地核主要由岩石構成。'],['B','地核是地球的中心，溫度極高。'],['C','地幔含有熾熱、會流動的岩漿。'],['D','地殼是地球的最外層，並分為大小不同的板塊。']],answer:['A'],explain:'題庫指出地核主要由金屬組成，而不是主要由岩石構成。'},
+{id:'01k006',type:'choice',prompt:'地殼有甚麼特點？（答案可多於一個。）',multi:true,options:[['A','地殼是完整一塊的。'],['B','地殼分為大小不同的板塊。'],['C','地幔內的岩漿流動，使板塊緩慢地移動。'],['D','板塊移動和碰撞可能引發地震或火山爆發。']],answer:['B','C','D'],explain:'地殼分成不同板塊；地幔內岩漿流動會使板塊緩慢移動，板塊移動和碰撞可能引發地震或火山爆發。'},
+{id:'01k007',type:'choice',prompt:'板塊移動和碰撞可能引致哪些自然現象？（答案可多於一個。）',multi:true,options:[['A','暴雨'],['B','閃電'],['C','地震'],['D','火山爆發']],answer:['C','D'],explain:'題庫答案是地震和火山爆發。'},
+{id:'01k008',type:'choice',prompt:'玄武岩屬於哪個種類的岩石？',options:[['A','火成岩'],['B','沉積岩'],['C','變質岩'],['D','以上皆不是']],answer:['A'],explain:'玄武岩屬於火成岩。'},
+{id:'01k009',type:'choice',prompt:'使用篩子篩分土壤，可以觀察土壤的甚麼特徵？',options:[['A','含有水'],['B','含有空氣'],['C','顆粒大小'],['D','重量']],answer:['C'],explain:'篩分土壤可以觀察土壤顆粒的大小。'},
+{id:'01k010',type:'choice',prompt:'在沙土、壤土和黏土中，哪一種土壤的顆粒最小？',options:[['A','沙土'],['B','壤土'],['C','黏土'],['D','不確定']],answer:['C'],explain:'三種土壤中，黏土的顆粒最小。'},
+{id:'01k011',type:'choice',prompt:'在沙土、壤土和黏土三種土壤中，哪一種排水能力最好？',options:[['A','沙土'],['B','壤土'],['C','黏土'],['D','不確定']],answer:['A'],explain:'沙土排水能力最好；黏土排水能力最差，壤土適中。'}
+],
+fill:[
+{id:'02k001',type:'fill',prompt:'地球的結構可以分為三層，最外層是 ______。',answers:['地殼'],explain:'地殼是地球的最外層。'},
+{id:'02k003',type:'fill',prompt:'地球的中心是 ______，溫度極高。',answers:['地核'],explain:'地球的中心是地核。'},
+{id:'02k004',type:'fill',prompt:'地核是地球的中心，主要由 ______ 組成，溫度極高。',answers:['金屬'],explain:'題庫指出地核主要由金屬組成。'},
+{id:'02k006',type:'fill',prompt:'地殼主要由 ______ 構成。',answers:['岩石'],explain:'地殼主要由岩石構成。'},
+{id:'02k007',type:'fill',prompt:'地幔含有熾熱、會流動的 ______。',answers:['岩漿'],explain:'題庫以熾熱、會流動的岩漿描述地幔的特點。'},
+{id:'02k008',type:'fill',prompt:'______ 內的岩漿流動會使板塊緩慢地移動。',answers:['地幔'],explain:'地幔內的岩漿流動會使板塊緩慢地移動。'},
+{id:'02k009',type:'fill',prompt:'地殼是地球的最外層，並分為大小不同的 ______。',answers:['板塊'],explain:'地殼分為大小不同的板塊。'},
+{id:'02k011',type:'fill',prompt:'火山爆發時，______ 從火山口噴發出來。',answers:['岩漿'],explain:'題庫答案是岩漿。'},
+{id:'02k012',type:'fill',prompt:'土壤是由 ______ 經過多年風吹雨打，碎裂而形成的。',answers:['岩石'],explain:'題庫指出土壤由岩石經多年風吹雨打、碎裂而形成。'},
+{id:'02k015',type:'fill',prompt:'由岩漿冷卻和凝固後形成的岩石，稱為 ______。',answers:['火成岩'],explain:'岩漿冷卻和凝固後形成火成岩。'},
+{id:'02k016',type:'fill',prompt:'在高壓和高溫下變質而成的岩石，稱為 ______。',answers:['變質岩'],explain:'在高壓和高溫下變質而成的岩石是變質岩。'},
+{id:'02k017',type:'fill',prompt:'被水沖下的岩石碎屑和土壤沉積而成的岩石，稱為 ______。',answers:['沉積岩'],explain:'岩石碎屑和土壤沉積而成的是沉積岩。'},
+{id:'02k020',type:'fill',prompt:'在沙土、壤土和黏土中，______ 排水能力最好。',answers:['沙土'],explain:'沙土的排水能力最好。'},
+{id:'02k018a',type:'fill',prompt:'除了土壤顆粒和動植物的物質，土壤還包含水和 ______。',answers:['空氣'],explain:'題庫列出的土壤成分包括土壤顆粒、水、空氣和動植物的物質。'}
+],
+word:[
+{id:'03k001a',type:'word',prompt:'地球的中心是 ______，主要由金屬組成，溫度極高。',choices:['地核','岩石','地殼','地幔'],answer:'地核',explain:'供詞選項中的正確答案是「地核」。'},
+{id:'03k001b',type:'word',prompt:'地球的最外層主要由 ______ 構成。',choices:['地核','岩漿','岩石','板塊'],answer:'岩石',explain:'地殼是地球最外層，主要由岩石構成。'},
+{id:'03k001c',type:'word',prompt:'地殼下是 ______，含有熾熱、會流動的岩漿。',choices:['地核','地殼','地幔','土壤'],answer:'地幔',explain:'地幔位於地殼之下。'},
+{id:'03k002a',type:'word',prompt:'地殼分為大小不同的 ______。',choices:['地核','岩漿','地震','板塊','地幔'],answer:'板塊',explain:'地殼分為大小不同的板塊。'},
+{id:'03k003a',type:'word',prompt:'岩漿冷卻和凝固後形成的岩石，就是 ______。',choices:['土壤','岩石','火成岩','砂岩','沉積岩','變質岩'],answer:'火成岩',explain:'岩漿冷卻和凝固後形成火成岩。'},
+{id:'03k003b',type:'word',prompt:'不同種類的岩石在高溫和高壓下變質而成的岩石，就是 ______。',choices:['火成岩','變質岩','地殼','沉積岩'],answer:'變質岩',explain:'不同種類的岩石在高溫和高壓下變質而成變質岩。'},
+{id:'03k003c',type:'word',prompt:'被水沖下的岩石碎屑和土壤沉積而成的岩石，就是 ______。',choices:['火成岩','土壤','沉積岩','變質岩'],answer:'沉積岩',explain:'碎屑和土壤沉積而成的是沉積岩。'},
+{id:'03s001',type:'word',prompt:'觀察岩石標本時，我們可以先觀察它的 ______ 和顆粒大小。',choices:['顏色','放大鏡','指甲','重量','花崗岩','砂岩','硬度'],answer:'顏色',explain:'技能題庫建議先觀察岩石的顏色和顆粒大小。'},
+{id:'03s003',type:'word',prompt:'測試土壤的 ______ 時，可比較不同土壤樣本排出的水量。',choices:['不同','同一高度','沙土','壤土','相同','排水能力','黏土'],answer:'排水能力',explain:'題庫中的實驗是比較不同土壤的排水能力。'}
+],
+tf:[
+{id:'04k001',type:'tf',prompt:'地球的最外層是地殼。',answer:true,explain:'正確。地殼是地球的最外層。'},
+{id:'04k002',type:'tf',prompt:'地幔含有熾熱、會流動的岩漿。',answer:true,explain:'正確。題庫以熾熱、會流動的岩漿描述地幔。'},
+{id:'04k003',type:'tf',prompt:'地球的中心是溫度極高的地幔。',answer:false,explain:'不正確。地球的中心是地核。'},
+{id:'04k004',type:'tf',prompt:'地球的中心主要由金屬組成，溫度極高。',answer:true,explain:'正確。這是地核的特點。'},
+{id:'04k005',type:'tf',prompt:'地殼主要由一塊完整的岩石構成。',answer:false,explain:'不正確。地殼不是完整的一塊，而是分為大小不同的板塊。'},
+{id:'04k006',type:'tf',prompt:'地幔內的岩漿流動會使板塊緩慢地移動。',answer:true,explain:'正確。'},
+{id:'04k007',type:'tf',prompt:'地震是由板塊移動和碰撞引致的自然現象。',answer:true,explain:'正確。題庫指出板塊移動和碰撞可能引發地震。'},
+{id:'04k008',type:'tf',prompt:'頁岩是火成岩的一種。',answer:false,explain:'不正確。題庫答案指出此說法錯誤。'},
+{id:'04k009',type:'tf',prompt:'大理岩和片麻岩都是沉積岩。',answer:false,explain:'不正確。題庫答案指出此說法錯誤。'},
+{id:'04k010',type:'tf',prompt:'除了土壤顆粒，土壤還包含動植物的物質、空氣和水。',answer:true,explain:'正確。這些都是題庫列出的土壤成分。'},
+{id:'04k011',type:'tf',prompt:'沙土排水能力最弱，黏土排水能力最強。',answer:false,explain:'不正確。沙土排水能力最強，黏土排水能力最弱。'}
+],
+correct:[
+{id:'05k001',type:'correct',prompt:'地球內部結構從內到外順序排列是地殼、地幔和地核。',answer:false,correction:['地核、地幔、地殼','地核→地幔→地殼','地核 地幔 地殼'],correctionDisplay:'地核、地幔、地殼',explain:'由內到外的正確順序是地核、地幔、地殼。'},
+{id:'05k002',type:'correct',prompt:'地幔是地球的最外層。',answer:false,correction:['地殼'],correctionDisplay:'地殼',explain:'地殼才是地球的最外層。'},
+{id:'05k003',type:'correct',prompt:'地殼不是完整的一塊，而是分為大小不同的板塊。',answer:true,explain:'正確。地殼分為大小不同的板塊。'},
+{id:'05k004',type:'correct',prompt:'火山爆發時，岩石冒升，從火山口噴發出來。',answer:false,correction:['岩漿'],correctionDisplay:'岩漿',explain:'從火山口噴發出來的是岩漿。'},
+{id:'05k005',type:'correct',prompt:'土壤是由岩石經過許多年的風吹雨打，碎裂而形成的。',answer:true,explain:'正確。'},
+{id:'05k006',type:'correct',prompt:'岩漿冷卻和凝固後形成的岩石，是變質岩。',answer:false,correction:['火成岩'],correctionDisplay:'火成岩',explain:'岩漿冷卻和凝固後形成的是火成岩。'},
+{id:'05k007',type:'correct',prompt:'不同種類的岩石在高溫和高壓下變質而成的岩石，就是沉積岩。',answer:false,correction:['變質岩'],correctionDisplay:'變質岩',explain:'在高溫和高壓下變質而成的是變質岩。'},
+{id:'05k008',type:'correct',prompt:'不同土壤的排水能力不同，其中壤土排水能力最強。',answer:false,correction:['沙土'],correctionDisplay:'沙土',explain:'沙土排水能力最強。'}
+],
+match:[
+{id:'07k001',type:'match',prompt:'地球的結構有甚麼特點？請把每一層與正確描述配對。',left:[['crust','地殼'],['mantle','地幔'],['core','地核']],options:[['A','含有熾熱、會流動的岩漿。'],['B','地球的中心，主要由金屬組成，溫度極高。'],['C','由多種氣體構成，包裹着地球表面。'],['D','地球的最外層，主要由岩石構成，並分為多個板塊。']],answer:{crust:'D',mantle:'A',core:'B'},explain:'地殼是最外層並分為板塊；地幔含有熾熱、會流動的岩漿；地核在地球中心，主要由金屬組成。'},
+{id:'07k004',type:'match',prompt:'不同岩石的形成過程是怎樣的？請配對岩石種類和形成方式。',left:[['igneous','火成岩'],['sedimentary','沉積岩'],['metamorphic','變質岩']],options:[['A','不同種類的岩石在高溫和高壓下變質而成。'],['B','岩漿冷卻和凝固後形成。'],['C','被水沖下的岩石碎屑和土壤沉積而成。']],answer:{igneous:'B',sedimentary:'C',metamorphic:'A'},explain:'火成岩由岩漿冷卻凝固形成；沉積岩由碎屑和土壤沉積形成；變質岩由其他岩石在高溫高壓下變質形成。'},
+{id:'07k005',type:'match',prompt:'以下岩石有甚麼特徵？請配對岩石與描述。',left:[['granite','花崗岩'],['sandstone','砂岩'],['marble','大理岩']],options:[['A','硬度較低，適合用來刻劃雕塑。'],['B','屬於火成岩。'],['C','屬於沉積岩。']],answer:{granite:'B',sandstone:'C',marble:'A'},explain:'花崗岩屬於火成岩，砂岩屬於沉積岩；題庫指出大理岩硬度較低，適合用來刻劃雕塑。'},
+{id:'07k006',type:'match',prompt:'以下三種岩石有甚麼特徵？請配對岩石與外觀描述。',left:[['granite','花崗岩'],['sandstone','砂岩'],['marble','大理岩']],options:[['A','通常有粉紅色、灰色等顏色，呈花斑狀。'],['B','通常有橙色、灰色等顏色，像大小不同的沙子黏合在一起。'],['C','通常有灰色、白色，表面有美麗的條紋。']],answer:{granite:'A',sandstone:'B',marble:'C'},explain:'花崗岩呈花斑狀；砂岩像不同大小的沙子黏合；大理岩常見灰色、白色及條紋。'},
+{id:'07a001',type:'match',prompt:'把以下對岩石和土壤資源的行為與有關影響配對。',left:[['take','從地質公園帶走岩石'],['litter','把垃圾拋到泥地上'],['return','觀察土壤後，把土壤倒回花壇']],options:[['A','珍惜土壤資源。'],['B','破壞公園的面貌。'],['C','污染土地。']],answer:{take:'B',litter:'C',return:'A'},explain:'帶走岩石會破壞公園面貌；把垃圾拋在泥地上會污染土地；把土壤倒回花壇是珍惜土壤資源的做法。'}
+],
+sort:[
+{id:'08k001',type:'sort',prompt:'把地球結構的各層由外至內順序排列出來。',items:[['crust','地殼'],['mantle','地幔'],['core','地核']],answer:['crust','mantle','core'],explain:'由外至內是地殼 → 地幔 → 地核。'},
+{id:'08k002',type:'sort',prompt:'把岩石形成的過程順序排列出來。',items:[['rise','岩漿冒升，從火山口噴發出來。'],['eruption','引發火山爆發。'],['plates','板塊移動和碰撞。'],['cool','岩漿經過冷卻和凝固後，形成岩石。']],answer:['plates','eruption','rise','cool'],explain:'依照題庫所列順序：板塊移動和碰撞 → 引發火山爆發 → 岩漿冒升噴發 → 岩漿冷卻凝固形成岩石。'}
+]};
+
+const $=id=>document.getElementById(id);let session=[],index=0,score=0,locked=false,orderSelected=[],submitted=[];const selectedQuestionIds=new Set();
+function shuffle(a){const b=[...a];for(let i=b.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[b[i],b[j]]=[b[j],b[i]]}return b}
+function norm(s){return String(s??'').toLowerCase().replace(/[\s，,。；;、：:「」『』？！!?→→]/g,'').replace(/（.*?）/g,'')}
+function sameSet(a,b){return a.length===b.length&&a.every(v=>b.includes(v))}
+function allQuestions(){return Object.keys(BANK).flatMap(type=>BANK[type].map(q=>({...q}))) }
+function findQuestion(id){return allQuestions().find(q=>q.id===id)}
+function libraryQuestionMarkup(q){
+ let content='';
+ if(q.type==='choice')content=`<ul>${q.options.map(([v,t])=>`<li><b>${v}.</b> ${t}</li>`).join('')}</ul>${q.multi?'<div class="library-column">可選多個答案</div>':''}`;
+ if(q.type==='word')content=`<div class="library-column"><b>供詞：</b>${q.choices.join('、')}</div>`;
+ if(q.type==='match')content=`<div class="library-column"><b>配對項目：</b>${q.left.map(([id,label])=>label).join('；')}</div><ul>${q.options.map(([v,t])=>`<li><b>${v}.</b> ${t}</li>`).join('')}</ul>`;
+ if(q.type==='sort')content=`<div class="library-column"><b>待排列項目：</b></div><ul>${q.items.map(([id,label])=>`<li>${label}</li>`).join('')}</ul>`;
+ if(q.type==='fill')content='<div class="library-column">作答方式：填寫空格。</div>';
+ if(q.type==='tf')content='<div class="library-column">作答方式：判斷正確或錯誤。</div>';
+ if(q.type==='correct')content='<div class="library-column">作答方式：先判斷正誤；若句子錯誤，填寫修正內容。</div>';
+ const selected=selectedQuestionIds.has(q.id);const capped=selectedQuestionIds.size>=5&&!selected;
+ return `<article class="library-card ${selected?'selected':''}"><div class="library-card-head"><div><span class="library-type">${TYPE_LABELS[q.type]}</span><span class="library-id">題目編號 ${q.id}</span></div><label class="library-pick"><input type="checkbox" data-library-id="${q.id}" ${selected?'checked':''} ${capped?'disabled':''}><span>選入測驗</span></label></div><div class="library-prompt">${q.prompt}</div><div class="library-content">${content}</div><details><summary>查看正確答案與解說</summary><div class="library-answer"><div><b>正確答案：</b>${correctText(q)}</div><div><b>解說：</b>${q.explain||'—'}</div></div></details></article>`;
+}
+function renderLibrary(){
+ const term=$('librarySearch').value.trim().toLowerCase();const type=$('typeFilter').value;const questions=allQuestions().filter(q=>(type==='all'||q.type===type)&&(!term||JSON.stringify(q).toLowerCase().includes(term)));
+ $('libraryList').innerHTML=questions.length?questions.map(libraryQuestionMarkup).join(''):'<div class="library-empty">找不到符合條件的題目，請試試其他關鍵字或題型。</div>';
+ $('librarySummary').textContent=`目前顯示 ${questions.length} / ${allQuestions().length} 題`;
+ $('selectedCount').textContent=`已選 ${selectedQuestionIds.size} / 5 題`;
+ $('startSelectedBtn').disabled=selectedQuestionIds.size!==5;
+ $('clearSelectionBtn').disabled=selectedQuestionIds.size===0;
+ $('libraryList').querySelectorAll('[data-library-id]').forEach(el=>{el.addEventListener('change',()=>{const id=el.dataset.libraryId;if(el.checked){if(selectedQuestionIds.size>=5){el.checked=false;$('selectionMessage').textContent='每輪最多選 5 題。請先取消一題，再選擇其他題目。';$('selectionMessage').classList.add('warn');return}selectedQuestionIds.add(id);$('selectionMessage').textContent='已加入自選測驗。你可以繼續選題，或展開題目查看答案。'}else{selectedQuestionIds.delete(id);$('selectionMessage').textContent='已取消這題。'}$('selectionMessage').classList.remove('warn');renderLibrary()})});
+}
+function startQuiz(){const types=shuffle(Object.keys(BANK)).slice(0,5);session=shuffle(types.map(t=>({...shuffle(BANK[t])[0]})));launchQuiz()}
+function startSelectedQuiz(){if(selectedQuestionIds.size!==5)return;session=[...selectedQuestionIds].map(id=>findQuestion(id)).filter(Boolean);if(session.length!==5)return;launchQuiz()}
+function launchQuiz(){index=0;score=0;locked=false;orderSelected=[];submitted=[];$('startScreen').classList.add('hide');$('resultsScreen').classList.add('hide');$('quizScreen').classList.remove('hide');renderQuestion()}
+function renderQuestion(){locked=false;orderSelected=[];$('feedback').className='feedback';$('feedback').innerHTML='';$('countLabel').textContent=`第 ${index+1} / ${session.length} 題`;$('progressBar').style.width=`${((index+1)/session.length)*100}%`;$('submitBtn').textContent='提交答案';$('submitBtn').disabled=false;$('questionArea').innerHTML='';const q=session[index];let html=`<div class="type-label">${TYPE_LABELS[q.type]}</div><h2 class="question">${q.prompt}</h2>`;
+ if(q.type==='choice'){if(q.multi)html+='<p class="subhint">可選多個答案。</p>';html+='<div class="answers">'+q.options.map(([v,t])=>`<label class="option"><input type="${q.multi?'checkbox':'radio'}" name="choice" value="${v}"><span class="opt-letter">${v}.</span><span>${t}</span></label>`).join('')+'</div>'}
+ if(q.type==='fill'){html+=`<p class="subhint">請在空格填上合適的詞語。</p><input class="fill-input" id="fillAnswer" type="text" autocomplete="off" placeholder="輸入答案……">`}
+ if(q.type==='word'){html+=`<p class="subhint">從以下詞語中選出正確答案。</p><div class="bank">${q.choices.map(x=>`<span class="word-chip">${x}</span>`).join('')}</div><select class="fill-input" id="wordAnswer"><option value="">請選擇答案</option>${q.choices.map(x=>`<option value="${x}">${x}</option>`).join('')}</select>`}
+ if(q.type==='tf'){html+=`<div class="answers"><label class="option"><input type="radio" name="tf" value="true"><span>✓　正確</span></label><label class="option"><input type="radio" name="tf" value="false"><span>✕　錯誤</span></label></div>`}
+ if(q.type==='correct'){html+=`<div class="answers"><label class="option"><input type="radio" name="tf" value="true"><span>✓　正確</span></label><label class="option"><input type="radio" name="tf" value="false"><span>✕　錯誤</span></label></div><div style="margin-top:14px"><label for="correctionInput" class="subhint" style="display:block;margin-bottom:7px">若句子錯誤，請寫出正確的詞語或說法（句子正確可留空）。</label><input class="correction-input" id="correctionInput" type="text" autocomplete="off" placeholder="修正答案……"></div>`}
+ if(q.type==='match'){html+=`<div class="match-grid">${q.left.map(([id,label])=>`<div class="match-prompt">${label}</div><select class="match-select" data-match="${id}"><option value="">請選擇描述</option>${q.options.map(([v,t])=>`<option value="${v}">${v}. ${t}</option>`).join('')}</select>`).join('')}</div>`}
+ if(q.type==='sort'){html+=`<p class="sort-hint">按你認為正確的先後次序，依次點擊下列項目。</p><div class="sort-options">${shuffle(q.items).map(([id,label])=>`<button type="button" class="sort-item" data-sort="${id}">${label}</button>`).join('')}</div><div class="order-box"><strong>你的排列：</strong><span id="orderValue">尚未選擇</span></div><div class="small-actions"><button type="button" class="text-button" id="undoSort">撤銷上一項</button><button type="button" class="text-button" id="clearSort">重新排列</button></div>`}
+ $('questionArea').innerHTML=html;$('questionArea').querySelectorAll('input,select').forEach(el=>{el.addEventListener('keydown',ev=>{if(ev.key==='Enter'&&el.tagName==='INPUT'&&el.type==='text'){ev.preventDefault();$('submitBtn').click()}})});}
+function readAnswer(q){if(q.type==='choice')return [...document.querySelectorAll('input[name="choice"]:checked')].map(x=>x.value);if(q.type==='fill')return $('fillAnswer').value.trim();if(q.type==='word')return $('wordAnswer').value;if(q.type==='tf')return document.querySelector('input[name="tf"]:checked')?.value??null;if(q.type==='correct')return {tf:document.querySelector('input[name="tf"]:checked')?.value??null,correction:$('correctionInput').value.trim()};if(q.type==='match'){const obj={};q.left.forEach(([id])=>obj[id]=document.querySelector(`[data-match="${id}"]`).value);return obj}if(q.type==='sort')return [...orderSelected];return null}
+function hasAnswer(q,a){if(q.type==='choice')return a.length>0;if(q.type==='fill')return a.length>0;if(q.type==='word')return !!a;if(q.type==='tf')return a!==null;if(q.type==='correct')return a.tf!==null&&(a.tf==='true'||a.correction.length>0);if(q.type==='match')return q.left.every(([id])=>!!a[id]);if(q.type==='sort')return a.length===q.items.length;return false}
+function isCorrect(q,a){if(q.type==='choice')return sameSet(a,q.answer);if(q.type==='fill')return q.answers.some(x=>norm(x)===norm(a));if(q.type==='word')return norm(a)===norm(q.answer);if(q.type==='tf')return (a==='true')===q.answer;if(q.type==='correct'){const truth=(a.tf==='true');if(truth!==q.answer)return false;if(!q.answer)return q.correction.some(x=>norm(x)===norm(a.correction));return true}if(q.type==='match')return q.left.every(([id])=>a[id]===q.answer[id]);if(q.type==='sort')return a.length===q.answer.length&&a.every((v,i)=>v===q.answer[i]);return false}
+function correctText(q){if(q.type==='choice')return q.answer.map(v=>{const o=q.options.find(x=>x[0]===v);return `${v}. ${o?.[1]??v}`}).join('；');if(q.type==='fill')return q.answers[0];if(q.type==='word')return q.answer;if(q.type==='tf')return q.answer?'正確（✓）':'錯誤（✕）';if(q.type==='correct')return q.answer?'正確（✓）':`錯誤（✕）；修正：${q.correctionDisplay}`;if(q.type==='match')return q.left.map(([id,label])=>`${label}：${q.answer[id]}. ${q.options.find(x=>x[0]===q.answer[id])[1]}`).join('；');if(q.type==='sort')return q.answer.map(id=>q.items.find(x=>x[0]===id)[1]).join(' → ');return ''}
+function userText(q,a){if(q.type==='choice')return a.length?a.map(v=>{const o=q.options.find(x=>x[0]===v);return `${v}. ${o?.[1]??v}`}).join('；'):'未作答';if(q.type==='fill'||q.type==='word')return a||'未作答';if(q.type==='tf')return a===null?'未作答':(a==='true'?'正確':'錯誤');if(q.type==='correct')return a.tf===null?'未作答':`${a.tf==='true'?'判斷為正確':'判斷為錯誤'}${a.correction?`；修正：${a.correction}`:''}`;if(q.type==='match')return q.left.map(([id,label])=>`${label}：${a[id]||'未選'}${a[id]?'. '+(q.options.find(x=>x[0]===a[id])?.[1]||''):''}`).join('；');if(q.type==='sort')return a.length?a.map(id=>q.items.find(x=>x[0]===id)[1]).join(' → '):'未作答';return ''}
+function submit(){if(locked)return;const q=session[index],a=readAnswer(q);if(!hasAnswer(q,a)){const fb=$('feedback');fb.className='feedback show bad';fb.innerHTML='<strong>請先完成這一題。</strong>選好答案後再提交。';return}const ok=isCorrect(q,a);submitted[index]={q,a,ok};if(ok)score++;locked=true;document.querySelectorAll('#questionArea input,#questionArea select,#questionArea button.sort-item,#questionArea .text-button').forEach(el=>el.disabled=true);const fb=$('feedback');fb.className=`feedback show ${ok?'good':'bad'}`;fb.innerHTML=`<strong>${ok?'答對了！✓':'再留意一下。✕'}</strong><div>${q.explain||''}</div>${ok?'':`<div class="answerline"><b>正確答案：</b>${correctText(q)}</div>`}`;$('submitBtn').textContent=index===session.length-1?'查看全部答案　→':'下一題　→';}
+function goNext(){if(!locked)return;if(index<session.length-1){index++;renderQuestion()}else showResults()}
+function showResults(){$('quizScreen').classList.add('hide');$('resultsScreen').classList.remove('hide');$('scoreRing').textContent=`${score} / ${session.length}`;$('resultTitle').textContent=score===session.length?'全對！太棒了':score>=3?'做得不錯！':'完成今次練習！';$('resultSubtitle').textContent=`答對 ${score} 題，答錯 ${session.length-score} 題。以下列出全部題目的正確答案。`;$('reviewList').innerHTML=submitted.map((r,i)=>`<article class="review ${r.ok?'correct':'wrong'}"><div class="review-title">第 ${i+1} 題 · ${TYPE_LABELS[r.q.type]}　${r.ok?'✓':'✕'}</div><div>${r.q.prompt}</div><div class="review-line"><b>你的答案：</b>${userText(r.q,r.a)}</div><div class="review-line"><b>正確答案：</b>${correctText(r.q)}</div><div class="review-line"><b>解說：</b>${r.q.explain||'—'}</div></article>`).join('')}
+$('startBtn').addEventListener('click',startQuiz);$('restartBtn').addEventListener('click',startQuiz);$('startSelectedBtn').addEventListener('click',startSelectedQuiz);$('toggleLibraryBtn').addEventListener('click',()=>{const panel=$('libraryPanel');const opening=panel.classList.contains('hide');panel.classList.toggle('hide');$('toggleLibraryBtn').setAttribute('aria-expanded',String(opening));$('toggleLibraryBtn').textContent=opening?'收起題庫總覽　↑':'瀏覽全部題目／自選 5 題';if(opening)renderLibrary()});$('librarySearch').addEventListener('input',renderLibrary);$('typeFilter').addEventListener('change',renderLibrary);$('clearSelectionBtn').addEventListener('click',()=>{selectedQuestionIds.clear();$('selectionMessage').textContent='已清除選取。你可以重新勾選 5 題。';$('selectionMessage').classList.remove('warn');renderLibrary()});$('chooseAgainBtn').addEventListener('click',()=>{$('resultsScreen').classList.add('hide');$('quizScreen').classList.add('hide');$('startScreen').classList.remove('hide');$('libraryPanel').classList.remove('hide');$('toggleLibraryBtn').setAttribute('aria-expanded','true');$('toggleLibraryBtn').textContent='收起題庫總覽　↑';renderLibrary();window.scrollTo({top:0,behavior:'smooth'})});$('quitBtn').addEventListener('click',()=>{if(confirm('要重新抽題嗎？目前這輪作答紀錄將會清除。'))startQuiz()});$('submitBtn').addEventListener('click',()=>locked?goNext():submit());
+renderLibrary();
+document.addEventListener('click',ev=>{const sortBtn=ev.target.closest('[data-sort]');if(sortBtn&&!locked){const id=sortBtn.dataset.sort;if(!orderSelected.includes(id)){orderSelected.push(id);sortBtn.disabled=true;const q=session[index];$('orderValue').textContent=orderSelected.map(x=>q.items.find(y=>y[0]===x)[1]).join(' → ')}return}if(ev.target.id==='undoSort'&&!locked){const id=orderSelected.pop();if(id){const b=document.querySelector(`[data-sort="${id}"]`);if(b)b.disabled=false}const q=session[index];$('orderValue').textContent=orderSelected.length?orderSelected.map(x=>q.items.find(y=>y[0]===x)[1]).join(' → '):'尚未選擇'}if(ev.target.id==='clearSort'&&!locked){orderSelected=[];document.querySelectorAll('[data-sort]').forEach(b=>b.disabled=false);$('orderValue').textContent='尚未選擇'}});
+</script>
+</body>
+</html>
